@@ -1,0 +1,8 @@
+{
+  "name": "Remix: ブラック・ジャック",
+  "description": "難易度選択やチップベット機能、滑らかなカードアニメーションを搭載した、本格的なブラック・ジャックゲーム。対戦相手との駆け引きを楽しめます。",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
