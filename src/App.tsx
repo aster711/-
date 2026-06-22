@@ -1703,7 +1703,7 @@ export default function App() {
             <h1 className="text-sm font-bold tracking-widest text-amber-500 font-serif uppercase">ブラック・ジャック</h1>
           </div>
           <div className="flex items-center gap-2 text-xs text-zinc-300">
-            {selectedCharId && (
+            {selectedCharId && phase !== 'char_select' && (
               <span className="bg-amber-950/40 text-amber-300 border border-amber-500/25 px-2 py-0.5 rounded font-black font-serif">
                 使用キャラ: {TOUHOU_CHARACTERS[selectedCharId].japaneseName}
               </span>
@@ -2732,7 +2732,10 @@ export default function App() {
 
               {/* Cancel Button */}
               <button
-                onClick={() => setShowDifficultyPopup(false)}
+                onClick={() => {
+                  setSelectedCharId(null);
+                  setShowDifficultyPopup(false);
+                }}
                 className="mt-6 text-xs py-2 px-6 rounded-full border border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-850 hover:border-zinc-700 transition-all cursor-pointer font-bold leading-none"
                 id="difficulty-close-btn"
               >
